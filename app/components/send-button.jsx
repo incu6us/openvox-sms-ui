@@ -17,6 +17,8 @@ export default class SendButton extends Component {
                     phone + "&message=" + message + "&port=" + modem[rand] + "&report=JSON";
 
                 $('button#sendMsg').prop('disabled', true)
+                $('div#successSent').hide()
+                $('div#errorSent').hide()
 
                 $.ajax({
                     url: url,
